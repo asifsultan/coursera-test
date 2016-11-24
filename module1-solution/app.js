@@ -6,20 +6,23 @@
     LunchCheckController.inject = ['$scope'];
 
     function LunchCheckController($scope){
-        $scope.lunchItem ="";
+        $scope.lunchItem= "";
         var total = 0;
         $scope.splitString =function(){
             var comma =',';
             var space = ' '; 
             var splittedString;
             var myString = $scope.lunchItem;
+            if(myString != "")
             splittedString= myString.split(comma);
-            console.log(splittedString);
-
+          
+            if(splittedString > "")
             total=splittedString.length;
-            console.log(total);
             return total;
         }
+
+
+////////Case for handling space is not included///////
           $scope.displayMessage = function(){
             if(total > 3){
                 return "Too much!";
@@ -28,7 +31,7 @@
                 return "Enjoy!";
             }
             else{
-                return "Empty";
+                return "Please enter data first!";
             }
         }
     

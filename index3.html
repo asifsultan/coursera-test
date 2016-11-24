@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="FilterApp">
+    <head>
+        <meta charset="utf-8">
+        <script src="angular.min.js"></script>
+        <script src="app3.js"></script>
+        <style>body {font-size: 1.2em; }</style>
+        <title>Filters</title>
+
+    </head>
+    <body>
+        <h1>Filters</h1>
+        <div ng-controller="FilterController">
+           {{name}} has a message for you: <br>
+            Original :{{message()}} <br>
+            Loves: {{sayLoveMessage()}}<br>
+            Truth: {{sayLoveMessage() | truth : 'eat' : 'drinks'}}<br>
+            BIG TRUTH: {{sayLoveMessage() | truth : 'eat' : 'drinks' | uppercase}}
+
+            <div>
+                <button ng-click="dontEat()">Change image</button>
+                Cost: {{cost | currency }}
+                <br>
+                <img ng-src="images/icon{{state}}.png">
+            </div>
+        </div>
+    </body>
+</html>
