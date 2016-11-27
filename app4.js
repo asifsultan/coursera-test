@@ -1,14 +1,12 @@
 (function(){
-'use strict'
-
+    'use strict'
     angular.module('BindingApp', [])
-    .controller('BindingController', BindingController)
+    .controller('BindingController', BindingController);
 
     BindingController.$inject =['$scope'];
-
-    function BindingController($scope){
+function BindingController($scope){
         $scope.firstName ="Asif";
-        $scope.fullName="";
+         // $scope.fullName="";
 
 
     $scope.showNumberOfWatchers = function(){
@@ -26,6 +24,6 @@
     $scope.logFullName = function(){
         console.log("Full name is: ", $scope.fullName);
     };
-}
 
+}
 })();
