@@ -9,7 +9,7 @@
     function FilterController($scope, lovesFilter){
         $scope.name = "Asif Sultan";  
         $scope.state = 1;
-        $scope.cost = 0.45;
+        $scope.cost = 0.95;
 
 
         $scope.message =function(){
@@ -18,7 +18,7 @@
             return msg;
         };
 
-        $scope.sayLoveMessage = function(){
+        $scope.sayLovesMessage = function(){
             var msg = "Asif no likes to eat anything at night!"
             msg = lovesFilter(msg);
             return msg;
@@ -47,3 +47,6 @@
             };
         }
 })();
+
+
+

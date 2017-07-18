@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="FilterApp">
+  <head>
+        <meta charset="utf-8">
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+        <style>body {font-size: 1.2em; }</style>
+        <title>Filters</title>
+
+    </head>
+<body >
+
+	<h1>Custom Filters </h1>
+	<div ng-controller="FilterController">
+		Original : {{sayMessage()}} <br>
+		Loves: {{sayLovesMessage()}} <br>
+		Truth: {{sayLovesMessage() | truth :'healthy' : 'cookie'}}<br>
+		Big Truth: {{sayLovesMessage() | truth :'healthy' : 'cookie' | uppercase}}<br>
+		<div>
+			<button btn-primary ng-click="feedAsif()"> Let's do it</button>
+			<br>
+			 Cost: {{cost | currency : P : 3}}
+			<br>
+			<img ng-src="images/icon{{stateofBeing()}}.png">
+		</div>
+	</div>
+</body>
+</html>

@@ -15,7 +15,8 @@
             {{sayMessage()}}
 
             <div>
-                <button ng-click="changeImage()">Change image</button>
+                <button ng-click="changeImage()">Change image</button><br>
+                    Cost : {{cookieCost | currency : "^" : 3 }}
                 <br>
                 <img ng-src="images/icon{{state}}.png">
             </div>

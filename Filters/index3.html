@@ -13,13 +13,13 @@
         <div ng-controller="FilterController">
            {{name}} has a message for you: <br>
             Original :{{message()}} <br>
-            Loves: {{sayLoveMessage()}}<br>
-            Truth: {{sayLoveMessage() | truth : 'eat' : 'drinks'}}<br>
-            BIG TRUTH: {{sayLoveMessage() | truth : 'eat' : 'drinks' | uppercase}}
+            Loves: {{sayLovesMessage()}}<br>
+            Truth: {{sayLovesMessage() | truth : 'eat' : 'drink'}}<br>
+            BIG TRUTH: {{sayLovesMessage() | truth : 'eat' : 'drink' | uppercase}}
 
             <div>
-                <button ng-click="dontEat()">Change image</button>
-                Cost: {{cost | currency }}
+                <button ng-click="feedAsif()">Change image</button>
+               
                 <br>
                 <img ng-src="images/icon{{state}}.png">
             </div>
