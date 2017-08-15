@@ -33,7 +33,7 @@ console.log("Shopping List:", shoppingList);
 
     RepeatController.$inject =['$scope'];
     function RepeatController($scope){
-        $scope.shoppingList1 = shoppingList;
+        $scope.collection = shoppingList;
 
 
     }
