@@ -1,9 +1,14 @@
 body {
-  font-size: 1.2em;
+  font-family: "times";
+}
+
+#itemList{
+	padding-top: 10px;
+}
+
 }
 #list {
   float: left;
-  
 }
 
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app='ShoppingListPrromiseApp'>
+<head>
+<meta charset="utf-8">
+    <script src="angular.min.js" ></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+	<title>Custom Service</title>
+</head>
+<body class="container">
+	<h1>Shopping List with a Promise</h1>
+
+	<div class="container" id="list" ng-controller='ShoppingListController as list'>
+		<h3>Shopping List: </h3>
+		<input type="text" ng-model="list.name" placeholder="Item name">
+		<input type="text" ng-model="list.quantity" placeholder="Quantity">
+		boxes
+		<button class="btn btn-primary btn-xs" ng-click="list.addItem();">Add item</button>
+		<div id="itemList">
+		<ol>
+			<li ng-repeat="item in list.items">   
+				{{item.quantity}} of {{item.name}}
+				<button class="btn btn-primary btn-xs" ng-click="list.removeItems($index);"> Remove Item</button>
+			</li>
+		</ol>
+		</div>
+	</div>	
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+  	
+
+
+</body>
+</html>
