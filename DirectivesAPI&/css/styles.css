@@ -1,0 +1,17 @@
+body {
+  font-family: "times";
+}
+
+#itemList{
+	padding-top: 10px;
+}
+
+}
+#list {
+  float: left;
+}
+
+
+.error {
+  color: red;
+}

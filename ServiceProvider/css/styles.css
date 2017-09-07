@@ -1,5 +1,8 @@
+
 body {
   font-size: 1.2em;
+    font-family: times;
+
 }
 #list1, #list2 {
   float: left;
@@ -10,4 +13,5 @@ body {
 
 .error {
   color: red;
+  font-style: italic;
 }

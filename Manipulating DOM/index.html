@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app='DirectivesControllerApiApp'>
+<head>
+<meta charset="utf-8">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="angular.min.js" ></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>Link Function</title>
+</head>
+<body class="container">
+	<h1>Link Function</h1>
+
+	<div id="list" ng-controller='ShoppingListController as list'>
+		<!-- <h3>Shopping List #1</h3> -->
+		<input type="text" ng-model="list.itemName" placeholder="Item name">
+		<input type="text" ng-model="list.itemQuantity" placeholder="Quantity">
+		<button ng-click="list.addItem();">Add item</button>
+    <span>{{ list.lastRemoved }}</span>
+		<shopping-list items="list.items"
+    title="{{list.title}}"
+    bad-remove="list.removeItems"
+    on-remove="list.removeItems(index)"></shopping-list>
+
+	</div>
+
+	 <!-- LIST #2 (limited to 3 items) -->
+    <!-- <div id="list" ng-controller='ShoppingListController2 as list'>
+     	<h3>Shopping List #2</h3>
+		<input type="text" ng-model="list.itemName" placeholder="Item name">
+		<input type="text" ng-model="list.itemQuantity" placeholder="Quantity">
+		<button ng-click="list.addItem();">Add item</button>
+		  <shopping-list my-list="list2"
+      title="Shopping List #2 (Limited to 3)">
+    </shopping-list>
+  </div> -->
+
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

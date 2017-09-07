@@ -1,0 +1,30 @@
+body {
+  font-family: "times";
+  font-size: 1.2em;
+}
+/*
+
+#itemList{
+	padding-top: 10px;
+}*/
+
+.error {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+#list1, #list2 {
+  float: left;
+}
+#list2 {
+  margin-left: 20px;
+}
+
+.warning {
+  font-style: italic;
+  color: #a21341;
+}
+.title {
+  background-color: #383838;
+}
